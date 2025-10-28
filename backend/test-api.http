@@ -1,0 +1,19 @@
+### Add Category
+POST http://localhost:5000/api/categories/addcategory
+Content-Type: application/json
+
+{
+  "categoryName": "Fiction"
+}
+
+###
+
+### Get All Categories
+GET http://localhost:5000/api/categories/allcategories
+
+
+### Delete 
+DELETE http://localhost:5000/api/categories/delete/6900a311b6afa617f817d72b
+
+
+
