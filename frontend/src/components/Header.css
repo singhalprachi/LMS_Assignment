@@ -1,0 +1,152 @@
+/* Header.css - professional warm theme, pure CSS animations */
+
+/* Base header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8ede3; /* warm beige */
+  padding: 12px 40px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  transition: box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+/* Shadow when scrolled */
+.header.scrolled {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Logo */
+.logo-nav .logo-text {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3e2f1c; /* deep brown */
+  letter-spacing: 0.4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-accent {
+  color: #c28254; /* warm accent */
+  font-weight: 700;
+  margin-left: 6px;
+}
+
+/* nav-right contains search + nav list */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* Search input */
+.search-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #d9c3a2;
+  background: #fffaf5;
+  font-size: 0.95rem;
+  color: #3e2f1c;
+  outline: none;
+  min-width: 220px;
+  transition: box-shadow 0.18s ease, border-color 0.18s ease, transform 0.12s ease;
+}
+.search-input:focus {
+  border-color: #b67b4f;
+  box-shadow: 0 4px 14px rgba(182,123,79,0.12);
+  transform: translateY(-1px);
+}
+
+/* Navigation links - desktop */
+.nav-options {
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+.option a {
+  text-decoration: none;
+  color: #3e2f1c;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 6px 4px;
+  transition: color 0.22s ease, transform 0.15s ease;
+  display: inline-block;
+}
+.option a:hover {
+  color: #b67b4f;
+  transform: translateY(-2px);
+}
+
+/* Mobile menu button (hidden on large) */
+.mobile-menu {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+}
+.mobile-menu:focus { outline: 2px solid rgba(0,0,0,0.08); }
+
+/* Inline SVG icon styles */
+.menu-icon {
+  color: #3e2f1c;
+  width: 28px;
+  height: 28px;
+  transition: transform 0.18s ease;
+}
+.mobile-menu:hover .menu-icon { transform: scale(1.06); }
+
+/* RESPONSIVE: collapse to mobile menu */
+@media (max-width: 900px) {
+  .search-input { display: none; min-width: 0; }
+
+  .mobile-menu { display: inline-flex; align-items: center; justify-content: center; }
+
+  .nav-options {
+    position: fixed;
+    top: 68px;
+    right: -320px; /* hidden by default */
+    width: 260px;
+    max-width: 80%;
+    height: calc(100vh - 80px);
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+    background: linear-gradient(180deg,#fffaf5,#fff8f2);
+    border-radius: 12px 0 0 12px;
+    box-shadow: -6px 8px 28px rgba(0,0,0,0.12);
+    transition: right 0.36s cubic-bezier(.2,.9,.2,1), opacity 0.36s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-options.active {
+    right: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .option { width: 100%; }
+  .option a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+  }
+  .option a:hover { background: rgba(190,130,80,0.06); }
+}
+
+/* small screens: tighten spacing */
+@media (max-width: 420px) {
+  .header { padding: 10px 16px; }
+  .brand-accent { display: none; } /* shorter label */
+}
