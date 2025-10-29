@@ -1,15 +1,15 @@
 import React from 'react'
 
-import About from '../Components/About'
-import Footer from '../Components/Footer'
-import ImageSlider from '../Components/ImageSlider'
-import News from '../Components/News'
-import PhotoGallery from '../Components/PhotoGallery'
-import PopularBooks from '../Components/PopularBooks'
-import RecentAddedBooks from '../Components/RecentAddedBooks'
-import ReservedBooks from '../Components/ReservedBooks'
-import Stats from '../Components/Stats'
-import WelcomeBox from '../Components/WelcomeBox'
+import About from '../components/About'
+import Footer from '../components/Footer'
+import ImageSlider from '../components/ImageSlider'
+import News from '../components/News'
+import PhotoGallery from '../components/PhotoGallery'
+import PopularBooks from '../components/PopularBooks'
+import RecentAddedBooks from '../components/RecentAddedBooks'
+import ReservedBooks from '../components/ReservedBooks'
+import Stats from '../components/Stats'
+import WelcomeBox from '../components/WelcomeBox'
 
 function Home() {
     return (
