@@ -31,6 +31,7 @@ It helps users and admins manage books, reservations, and user activities effici
 ---
 
 ## Chatgpt Link -
+** I have used the AI to support the application **
 
 https://chatgpt.com/share/69023009-cc20-8012-b771-6bd460932a16
 
